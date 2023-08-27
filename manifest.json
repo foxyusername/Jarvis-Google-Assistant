@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Jarvis assistant",
+    "version": "1.0.0",
+    "description": "Helps to make day to day tasks",
+    "author": "Nika jamaspishvili",
+    "permissions": [
+        "activeTab"
+    ],
+    "background.service_worker": {
+        "scripts": [
+          "js/script.js",
+          "js/https://code.responsivevoice.org/responsivevoice.js"
+        ],
+        "persistent": false
+      },
+      "content_security_policy": {
+        "script-src": ["self", "https://code.responsivevoice.org"],
+        "object-src": "'self'"
+    },
+      "action": {
+        "default_popup": "index.html",
+        "default_title": "Jarvis"
+    }
+}
