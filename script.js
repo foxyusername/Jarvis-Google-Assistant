@@ -130,7 +130,6 @@ async function summarizeData(text) {
     try {
       const response = await fetch(apiUrl, requestOptions);
       const data = await response.json();
-      console.log("DATA IS" + data.summary);
       const speech= new SpeechSynthesisUtterance(data.summary);
 
     const voices = window.speechSynthesis.getVoices();
@@ -169,7 +168,6 @@ fetch('https://www.googleapis.com/customsearch/v1?q='+url+'&key='+GOOGLE_KEY+'&c
 
     // Extract search results from data.items
     const searchResults = data.items;
-    console.log(data);
     // Display the search results on your page
     searchResults.forEach((result,index) => {
 
@@ -188,7 +186,6 @@ fetch('https://www.googleapis.com/customsearch/v1?q='+url+'&key='+GOOGLE_KEY+'&c
 
   }).then((data)=>{                  //sendign request to summarize the text
    const joinedText =description.map((text,index)=>" . answer number"+[index+1]+" : "+text+"").join(' ');
-   console.log(description.join(' '));
    summarizeData(description.join(' '));
 })
   .catch(error => {
@@ -203,7 +200,6 @@ fetch('https://www.googleapis.com/customsearch/v1?q='+url+'&key='+GOOGLE_KEY+'&c
 
 //makes text turn into a voice
 function translateTranscription(command) {
-console.log(command);
 
 fetchData(command.trim());
 
