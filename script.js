@@ -154,8 +154,7 @@ async function summarizeData(text) {
       
       // Output the API response
     } catch (error) {
-      console.log('error', error);
-      alert('catched error');
+      alert('error', error);
     }
   }
 
@@ -191,8 +190,6 @@ fetch('https://www.googleapis.com/customsearch/v1?q='+url+'&key='+GOOGLE_KEY+'&c
    const joinedText =description.map((text,index)=>" . answer number"+[index+1]+" : "+text+"").join(' ');
    console.log(description.join(' '));
    summarizeData(description.join(' '));
-   alert('executed the summarization');
-
 })
   .catch(error => {
     console.error('An error occurred:', error);
@@ -207,7 +204,6 @@ fetch('https://www.googleapis.com/customsearch/v1?q='+url+'&key='+GOOGLE_KEY+'&c
 //makes text turn into a voice
 function translateTranscription(command) {
 console.log(command);
-
 
 fetchData(command.trim());
 
