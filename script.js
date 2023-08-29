@@ -134,7 +134,7 @@ async function summarizeData(text) {
 
     const voices = window.speechSynthesis.getVoices();
     speech.voice = voices[1];
-    speech.rate =0.7;
+    speech.rate =0.8;
     speech.pitch = 0.8;
 
     speechSynthesis.speak(speech);
