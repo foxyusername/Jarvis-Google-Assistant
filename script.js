@@ -1,3 +1,6 @@
+import {GOOGLE_KEY, SUMMARIZE_KEY} from "./config.js"
+
+
 let bars=document.querySelector('.bars');
 let circle1=document.getElementById("border-circle");
 let statusDiv=document.getElementById('status');
@@ -110,7 +113,7 @@ function voiceEnd(){
 }
 
 async function summarizeData(text) {
-    const apiKey = '466a0429beee3f61b740559ffc45365d';
+    const apiKey =SUMMARIZE_KEY;
     const apiUrl = 'https://api.meaningcloud.com/summarization-1.0';
   
     const formdata = new FormData();
@@ -160,7 +163,7 @@ function fetchData(url){
  
 description=[];
 
-fetch('https://www.googleapis.com/customsearch/v1?q='+url+'&key=AIzaSyCU1oo-J-zV3WmCV78wwDkr9GhT13Ik69A&cx=6691bf2ff8ae5494a')
+fetch('https://www.googleapis.com/customsearch/v1?q='+url+'&key='+GOOGLE_KEY+'&cx=6691bf2ff8ae5494a')
   .then(response => response.json())
   .then(data => {
 

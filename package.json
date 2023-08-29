@@ -3,7 +3,8 @@
   "dependencies": {
     "axios": "^1.4.0",
     "dotenv": "^16.3.1",
-    "openai": "^4.2.0"
+    "openai": "^4.2.0",
+    "requirejs": "^2.3.6"
   },
   "name": "soundgame",
   "version": "1.0.0",
