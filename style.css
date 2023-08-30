@@ -44,6 +44,10 @@
   overflow-y:auto;
 }
 
+#textDiv h2{
+color:whitesmoke;
+}
+
 #textDiv:nth-child(1){
 margin-top: 20px;
 }
