@@ -165,7 +165,7 @@ fetch('https://www.googleapis.com/customsearch/v1?q='+url+'&key='+GOOGLE_KEY+'&c
   .then(response => response.json())
   .then(data => {
 
-  const header=document.createElement('h2');
+  const header=document.createElement('h1');
     header.innerText=url
 
    textDiv.appendChild(header);
